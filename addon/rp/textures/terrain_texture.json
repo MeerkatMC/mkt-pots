@@ -1,0 +1,56 @@
+{
+	"resource_pack_name": "vanilla",
+	"texture_name": "atlas.terrain",
+	"padding": 8,
+	"num_mip_levels": 4,
+	"texture_data": {
+		"bap:flower_pot_black": {
+			"textures": "textures/blocks/flower_pot/black_flower_pot.png"
+		},
+		"bap:flower_pot_blue": {
+			"textures": "textures/blocks/flower_pot/blue_flower_pot.png"
+		},
+		"bap:flower_pot_brown": {
+			"textures": "textures/blocks/flower_pot/brown_flower_pot.png"
+		},
+		"bap:flower_pot_cyan": {
+			"textures": "textures/blocks/flower_pot/cyan_flower_pot.png"
+		},
+		"bap:flower_pot_gray": {
+			"textures": "textures/blocks/flower_pot/gray_flower_pot.png"
+		},
+		"bap:flower_pot_green": {
+			"textures": "textures/blocks/flower_pot/green_flower_pot.png"
+		},
+		"bap:flower_pot_light_blue": {
+			"textures": "textures/blocks/flower_pot/light_blue_flower_pot.png"
+		},
+		"bap:flower_pot_light_gray": {
+			"textures": "textures/blocks/flower_pot/light_gray_flower_pot.png"
+		},
+		"bap:flower_pot_lime": {
+			"textures": "textures/blocks/flower_pot/lime_flower_pot.png"
+		},
+		"bap:flower_pot_magenta": {
+			"textures": "textures/blocks/flower_pot/magenta_flower_pot.png"
+		},
+		"bap:flower_pot_orange": {
+			"textures": "textures/blocks/flower_pot/orange_flower_pot.png"
+		},
+		"bap:flower_pot_pink": {
+			"textures": "textures/blocks/flower_pot/pink_flower_pot.png"
+		},
+		"bap:flower_pot_purple": {
+			"textures": "textures/blocks/flower_pot/purple_flower_pot.png"
+		},
+		"bap:flower_pot_red": {
+			"textures": "textures/blocks/flower_pot/red_flower_pot.png"
+		},
+		"bap:flower_pot_white": {
+			"textures": "textures/blocks/flower_pot/white_flower_pot.png"
+		},
+		"bap:flower_pot_yellow": {
+			"textures": "textures/blocks/flower_pot/yellow_flower_pot.png"
+		}
+	}
+}

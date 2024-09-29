@@ -1,0 +1,24 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bap:purple_flower_pot_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:purple_dye"
+			},
+			{
+				"item": "minecraft:flower_pot"
+			}
+		],
+		"result": [
+			{
+				"item": "bap:flower_pot_purple_placer"
+			}
+		]
+	}
+}

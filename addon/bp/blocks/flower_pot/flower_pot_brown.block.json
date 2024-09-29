@@ -1,0 +1,998 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "bap:flower_pot_brown",
+			"states": {
+				"bap:pot_contents": [ "empty", "flower", "azalea", "cactus", "bamboo", "sapling", "fungus" ],
+				"bap:azalea_type": [ "minecraft:azalea", "minecraft:flowering_azalea" ],
+				"bap:sapling_type": [ "minecraft:oak_sapling", "minecraft:dark_oak_sapling", "minecraft:spruce_sapling", "minecraft:jungle_sapling",
+									  "minecraft:acacia_sapling", "minecraft:cherry_sapling", "minecraft:birch_sapling", "minecraft:mangrove_propagule" ],
+				"bap:fungus_type": [ "minecraft:crimson_fungus", "minecraft:warped_fungus", "minecraft:brown_mushroom", "minecraft:red_mushroom", 
+				                     "minecraft:crimson_roots", "minecraft:warped_roots" ],
+				"bap:flower_type": [ "minecraft:dandelion", "minecraft:poppy", "minecraft:blue_orchid", "minecraft:azure_bluet",
+                                     "minecraft:allium", "minecraft:red_tulip", "minecraft:orange_tulip", "minecraft:white_tulip",
+                                     "minecraft:pink_tulip", "minecraft:oxeye_daisy", "minecraft:cornflower", "minecraft:lily_of_the_valley", 
+                                     "minecraft:torchflower", "minecraft:wither_rose", "minecraft:deadbush", "minecraft:fern" ]
+			}
+		},
+		"components": {
+			"minecraft:custom_components": [ "bap:change_flower" ],
+			"minecraft:collision_box": {
+				"origin": [-3, 0, -3],
+				"size": [6, 6, 6]
+			},
+			"minecraft:selection_box": {
+				"origin": [-3, 0, -3],
+				"size": [6, 6, 6]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.4
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 15
+			},
+			"minecraft:geometry": {
+				"identifier": "geometry.bap.flower_pot",
+				"bone_visibility": {
+					"pot": true,
+					"azalea": "query.block_state('bap:pot_contents') == 'azalea'",
+					"cactus": "query.block_state('bap:pot_contents') == 'cactus'",
+					"bamboo": "query.block_state('bap:pot_contents') == 'bamboo'",
+					"plant": "(query.block_state('bap:pot_contents') == 'flower') || (query.block_state('bap:pot_contents') == 'fungus') || (query.block_state('bap:pot_contents') == 'sapling')"
+				}
+			},
+			"minecraft:loot": "loot_tables/blocks/bap_flower_pot_brown.json",
+			"minecraft:light_dampening": 0,
+			"minecraft:map_color": "#ffffff"
+		},
+		"permutations": [
+			{
+				"condition": "query.block_state('bap:pot_contents') == 'empty'",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:dandelion') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "dandelion",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:azure_bluet') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "azure_bluet",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:poppy') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "poppy",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:blue_orchid') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "blue_orchid",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:allium') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "allium",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:red_tulip') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "red_tulip",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:orange_tulip') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "orange_tulip",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:white_tulip') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "white_tulip",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:pink_tulip') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "pink_tulip",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:lily_of_the_valley') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "lily_of_the_valley",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:cornflower') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "cornflower",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:wither_rose') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "wither_rose",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:torchflower') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "torchflower",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:deadbush') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "deadbush",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:fern') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "fern",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:flower_type') == 'minecraft:oxeye_daisy') && (query.block_state('bap:pot_contents') == 'flower')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "oxeye_daisy",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('bap:pot_contents') == 'cactus'",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"cactus_side": {
+							"texture": "cactus_side",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"cactus_top": {
+							"texture": "cactus_top",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "query.block_state('bap:pot_contents') == 'bamboo'",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"bamboo_side": {
+							"texture": "bamboo_stem",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"bamboo_top": {
+							"texture": "bamboo_stem",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"bamboo_leaf": {
+							"texture": "bamboo_singleleaf",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:fungus_type') == 'minecraft:crimson_fungus') && (query.block_state('bap:pot_contents') == 'fungus')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "nether_shroom_red",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:fungus_type') == 'minecraft:warped_fungus') && (query.block_state('bap:pot_contents') == 'fungus')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "nether_shroom_blue",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:fungus_type') == 'minecraft:brown_mushroom') && (query.block_state('bap:pot_contents') == 'fungus')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mushroom_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:fungus_type') == 'minecraft:red_mushroom') && (query.block_state('bap:pot_contents') == 'fungus')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mushroom_red",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:fungus_type') == 'minecraft:crimson_roots') && (query.block_state('bap:pot_contents') == 'fungus')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "crimson_roots_pot",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:fungus_type') == 'minecraft:warped_roots') && (query.block_state('bap:pot_contents') == 'fungus')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "warped_roots_pot",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:sapling_type') == 'minecraft:oak_sapling') && (query.block_state('bap:pot_contents') == 'sapling')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "oak_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:sapling_type') == 'minecraft:dark_oak_sapling') && (query.block_state('bap:pot_contents') == 'sapling')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "dark_oak_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:sapling_type') == 'minecraft:spruce_sapling') && (query.block_state('bap:pot_contents') == 'sapling')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "spruce_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:sapling_type') == 'minecraft:jungle_sapling') && (query.block_state('bap:pot_contents') == 'sapling')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "jungle_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:sapling_type') == 'minecraft:acacia_sapling') && (query.block_state('bap:pot_contents') == 'sapling')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "acacia_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:sapling_type') == 'minecraft:cherry_sapling') && (query.block_state('bap:pot_contents') == 'sapling')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "cherry_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:sapling_type') == 'minecraft:birch_sapling') && (query.block_state('bap:pot_contents') == 'sapling')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "birch_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:sapling_type') == 'minecraft:mangrove_propagule') && (query.block_state('bap:pot_contents') == 'sapling')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mangrove_propagule",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:azalea_type') == 'minecraft:azalea') && (query.block_state('bap:pot_contents') == 'azalea')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"azalea_side": {
+							"texture": "potted_azalea_bush_side",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"azalea_up": {
+							"texture": "potted_azalea_bush_top",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"azalea_plant": {
+							"texture": "potted_azalea_bush_plant",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('bap:azalea_type') == 'minecraft:flowering_azalea') && (query.block_state('bap:pot_contents') == 'azalea')",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "bap:flower_pot_brown",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"azalea_side": {
+							"texture": "potted_flowering_azalea_bush_side",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"azalea_up": {
+							"texture": "potted_flowering_azalea_bush_top",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"azalea_plant": {
+							"texture": "potted_flowering_azalea_bush_plant",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test" }
+					}
+				}
+			}		
+		]
+	}
+}

@@ -1,0 +1,52 @@
+{
+	"texture_data": {
+		"black_flower_pot": {
+			"textures": "textures/items/flower_pot/black_flower_pot.png"
+		},
+		"blue_flower_pot": {
+			"textures": "textures/items/flower_pot/blue_flower_pot.png"
+		},
+		"brown_flower_pot": {
+			"textures": "textures/items/flower_pot/brown_flower_pot.png"
+		},
+		"cyan_flower_pot": {
+			"textures": "textures/items/flower_pot/cyan_flower_pot.png"
+		},
+		"green_flower_pot": {
+			"textures": "textures/items/flower_pot/green_flower_pot.png"
+		},
+		"gray_flower_pot": {
+			"textures": "textures/items/flower_pot/gray_flower_pot.png"
+		},
+		"light_blue_flower_pot": {
+			"textures": "textures/items/flower_pot/light_blue_flower_pot.png"
+		},
+		"light_gray_flower_pot": {
+			"textures": "textures/items/flower_pot/light_gray_flower_pot.png"
+		},
+		"lime_flower_pot": {
+			"textures": "textures/items/flower_pot/lime_flower_pot.png"
+		},
+		"magenta_flower_pot": {
+			"textures": "textures/items/flower_pot/magenta_flower_pot.png"
+		},
+		"orange_flower_pot": {
+			"textures": "textures/items/flower_pot/orange_flower_pot.png"
+		},
+		"pink_flower_pot": {
+			"textures": "textures/items/flower_pot/pink_flower_pot.png"
+		},
+		"purple_flower_pot": {
+			"textures": "textures/items/flower_pot/purple_flower_pot.png"
+		},
+		"red_flower_pot": {
+			"textures": "textures/items/flower_pot/red_flower_pot.png"
+		},
+		"white_flower_pot": {
+			"textures": "textures/items/flower_pot/white_flower_pot.png"
+		},
+		"yellow_flower_pot": {
+			"textures": "textures/items/flower_pot/yellow_flower_pot.png"
+		}
+	}
+}

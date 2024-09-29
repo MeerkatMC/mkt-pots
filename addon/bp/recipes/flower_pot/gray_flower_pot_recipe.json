@@ -1,0 +1,24 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bap:gray_flower_pot_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:gray_dye"
+			},
+			{
+				"item": "minecraft:flower_pot"
+			}
+		],
+		"result": [
+			{
+				"item": "bap:flower_pot_gray_placer"
+			}
+		]
+	}
+}
