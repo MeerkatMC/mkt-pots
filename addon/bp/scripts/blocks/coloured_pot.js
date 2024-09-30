@@ -7,44 +7,43 @@ import { EquipmentSlot, ItemStack, GameMode, world } from '@minecraft/server';
 
 /* List of coloured_pot attachable items and content catergory */
 const pot_items = {
-    "minecraft:dandelion":          { catergory: "flower", },
-    "minecraft:poppy":              { catergory: "flower", },
-    "minecraft:blue_orchid":        { catergory: "flower", },
-    "minecraft:azure_bluet":        { catergory: "flower", },
-    "minecraft:pink_tulip":         { catergory: "flower", },
-    "minecraft:white_tulip":        { catergory: "flower", },
-    "minecraft:orange_tulip":       { catergory: "flower", },
-    "minecraft:red_tulip":          { catergory: "flower", },
-    "minecraft:allium":             { catergory: "flower", },
-    "minecraft:oxeye_daisy":        { catergory: "flower", },
-    "minecraft:cornflower":         { catergory: "flower", },
-    "minecraft:lily_of_the_valley": { catergory: "flower", },
-    "minecraft:torchflower":        { catergory: "flower", },
-    "minecraft:wither_rose":        { catergory: "flower", },
-    "minecraft:deadbush":           { catergory: "flower", },
-    "minecraft:fern":               { catergory: "flower", },
+    "empty":                        { catergory: 0, variant: 0, },
+    "minecraft:azalea":             { catergory: 0, variant: 1, },
+    "minecraft:flowering_azalea":   { catergory: 0, variant: 2, },
+    "minecraft:cactus":             { catergory: 0, variant: 3, },
+    "minecraft:bamboo":             { catergory: 0, variant: 4, },
 
-    "minecraft:azalea":             { catergory: "azalea", },
-    "minecraft:flowering_azalea":   { catergory: "azalea", },
-
-    "minecraft:crimson_fungus":     { catergory: "fungus", },
-    "minecraft:warped_fungus":      { catergory: "fungus", },
-    "minecraft:brown_mushroom":     { catergory: "fungus", },
-    "minecraft:red_mushroom":       { catergory: "fungus", },
-    "minecraft:crimson_roots":      { catergory: "fungus", },
-    "minecraft:warped_roots":       { catergory: "fungus", },
-
-    "minecraft:oak_sapling":        { catergory: "sapling", },
-    "minecraft:dark_oak_sapling":   { catergory: "sapling", },
-    "minecraft:spruce_sapling":     { catergory: "sapling", },
-    "minecraft:jungle_sapling":     { catergory: "sapling", },
-    "minecraft:acacia_sapling":     { catergory: "sapling", },
-    "minecraft:cherry_sapling":     { catergory: "sapling", },
-    "minecraft:birch_sapling":      { catergory: "sapling", },
-    "minecraft:mangrove_propagule": { catergory: "sapling", },
-
-    "minecraft:cactus":             { catergory: "cactus", },
-    "minecraft:bamboo":             { catergory: "bamboo", },
+    "minecraft:dandelion":          { catergory: 1, variant: 0, },
+    "minecraft:azure_bluet":        { catergory: 1, variant: 1, },
+    "minecraft:poppy":              { catergory: 1, variant: 2, },
+    "minecraft:blue_orchid":        { catergory: 1, variant: 3, },
+    "minecraft:allium":             { catergory: 1, variant: 4, },
+    "minecraft:red_tulip":          { catergory: 1, variant: 5, },
+    "minecraft:orange_tulip":       { catergory: 1, variant: 6, },
+    "minecraft:white_tulip":        { catergory: 1, variant: 7, },
+    "minecraft:pink_tulip":         { catergory: 1, variant: 8, },
+    "minecraft:lily_of_the_valley": { catergory: 1, variant: 9, },
+    "minecraft:cornflower":         { catergory: 1, variant: 10, },
+    "minecraft:wither_rose":        { catergory: 1, variant: 11, },
+    "minecraft:torchflower":        { catergory: 1, variant: 12, },
+    "minecraft:deadbush":           { catergory: 1, variant: 13, },
+    "minecraft:fern":               { catergory: 1, variant: 14, },
+    "minecraft:oxeye_daisy":        { catergory: 1, variant: 15, },
+   
+    "minecraft:oak_sapling":        { catergory: 2, variant: 0, },
+    "minecraft:dark_oak_sapling":   { catergory: 2, variant: 1, },
+    "minecraft:spruce_sapling":     { catergory: 2, variant: 2, },
+    "minecraft:jungle_sapling":     { catergory: 2, variant: 3, },
+    "minecraft:acacia_sapling":     { catergory: 2, variant: 4, },
+    "minecraft:cherry_sapling":     { catergory: 2, variant: 5, },
+    "minecraft:birch_sapling":      { catergory: 2, variant: 6, },
+    "minecraft:mangrove_propagule": { catergory: 2, variant: 7, },
+    "minecraft:crimson_fungus":     { catergory: 2, variant: 8, },
+    "minecraft:warped_fungus":      { catergory: 2, variant: 9, },
+    "minecraft:brown_mushroom":     { catergory: 2, variant: 10, },
+    "minecraft:red_mushroom":       { catergory: 2, variant: 11, },
+    "minecraft:crimson_roots":      { catergory: 2, variant: 12, },
+    "minecraft:warped_roots":       { catergory: 2, variant: 13, },
 };
 
 export class coloured_pot
@@ -76,40 +75,26 @@ export class coloured_pot
     }   /* init() */
 
     /* 
-     * Description: This method will get the current item attached to pot
-     *        Args: block - the custom block to query
+     * Description: This method will find the key for a given category and variant
+     *        Args: catergory - the block attached item catergory
+     *              variant   - the block attached item variant
      *      Return: current item attached to pot / undefined
      */
-    static get_content_item( block )
+    static find_pot_item(catergory, variant)
     {
-        let contents = block.permutation.getState( 'bap:pot_contents' );
-        let item     = undefined;
+        return Object.entries(pot_items).find(([key, value]) => 
+            value.catergory === catergory && value.variant === variant
+        )?.[0];  // returns the key or undefined if not found
+    }   /* find_pot_item() */
 
-        switch ( contents )
-        {
-            case 'flower':
-                item = block.permutation.getState( 'bap:flower_type' );
-                break;
-            case 'azalea':
-                item = block.permutation.getState( 'bap:azalea_type' );
-                break;
-            case 'sapling':
-                item = block.permutation.getState( 'bap:sapling_type' );
-                break;
-            case 'fungus':
-                item = block.permutation.getState( 'bap:fungus_type' );
-                break;
-            case 'bamboo':
-                item = 'minecraft:bamboo';
-                break;                   
-            case 'cactus':
-                item = 'minecraft:cactus';
-                break;
-            default:
-                break;
-        }
-
-        return item;
+    /* 
+     * Description: This method will get the current item attached to pot
+     *        Args: permutation - the custom block permutation to query
+     *      Return: current item attached to pot / undefined
+     */
+    static get_content_item( permutation )
+    {  
+        return this.find_pot_item( permutation.getState( 'bap:catergory' ), permutation.getState( 'bap:variant' ) );
     }   /* get_content_item() */
 
     /* 
@@ -125,16 +110,16 @@ export class coloured_pot
         if ( !equippable ) return;
 
         const mainhand = equippable.getEquipmentSlot(EquipmentSlot.Mainhand);
-        let contents = block.permutation.getState( 'bap:pot_contents' );
-        let current_item = this.get_content_item( block );
+        let current_item = this.get_content_item( block.permutation );
         
         // Check to remove flower from pot
         if ( !mainhand.hasItem() )
         {
-            if ( current_item != undefined )
+            if ( ( current_item != undefined ) && ( current_item != "empty" ) )
             {
                 dimension.spawnItem( new ItemStack(current_item), block.center() );
-                block.setPermutation( block.permutation.withState( "bap:pot_contents", 'empty' ) );
+                block.setPermutation( block.permutation.withState( "bap:catergory", 0 ) );
+                block.setPermutation( block.permutation.withState( "bap:variant", 0 ) );
             }
         }
         else
@@ -143,7 +128,7 @@ export class coloured_pot
             const pot_item = pot_items[mainhand.typeId];
             if (!pot_item) return;
 
-            if ( current_item != undefined )
+            if ( ( current_item != undefined ) && ( current_item != "empty" ) )
             {
                 // Check for "no change" condition for early exit
                 if ( mainhand.typeId == current_item ) return;
@@ -154,27 +139,9 @@ export class coloured_pot
                 dimension.spawnItem( new ItemStack(current_item), block.center() );
             }
 
-            // Set the content catergory
-            block.setPermutation( block.permutation.withState( "bap:pot_contents", pot_item.catergory ) );
-
-            // Set the content specific variant
-            switch ( pot_item.catergory )
-            {
-                case 'flower':
-                    block.setPermutation( block.permutation.withState( "bap:flower_type", mainhand.typeId ) );
-                    break;
-                case 'fungus':
-                    block.setPermutation( block.permutation.withState( "bap:fungus_type", mainhand.typeId ) );
-                    break;
-                case 'sapling':
-                    block.setPermutation( block.permutation.withState( "bap:sapling_type", mainhand.typeId ) );
-                    break;
-                case 'azalea':
-                    block.setPermutation( block.permutation.withState( "bap:azalea_type", mainhand.typeId ) );
-                    break;
-                default:
-                    break;
-            }
+            // Set the newly attached item
+            block.setPermutation( block.permutation.withState( "bap:catergory", pot_item.catergory ) );
+            block.setPermutation( block.permutation.withState( "bap:variant",   pot_item.variant ) );
 
             // Play generic place (into pot dirt) sound
             dimension.playSound( "dig.grass", block.center(), { volume: 0.5 } );
@@ -203,32 +170,11 @@ export class coloured_pot
     {
         const { block, destroyedBlockPermutation, dimension } = event;
 
-        let contents = destroyedBlockPermutation.getState( 'bap:pot_contents' );
-        if ( contents != 'empty' )
+        let current_item = this.get_content_item( destroyedBlockPermutation );
+
+        if ( ( current_item != undefined ) && ( current_item != "empty" ) )
         {
-            switch ( contents )
-            {
-                case 'flower':
-                    dimension.spawnItem( new ItemStack(destroyedBlockPermutation.getState( 'bap:flower_type' )), block.center() );
-                    break;
-                case 'azalea':
-                    dimension.spawnItem( new ItemStack(destroyedBlockPermutation.getState( 'bap:azalea_type' )), block.center() );
-                    break;
-                case 'sapling':
-                    dimension.spawnItem( new ItemStack(destroyedBlockPermutation.getState( 'bap:sapling_type' )), block.center() );
-                    break;
-                case 'fungus':
-                    dimension.spawnItem( new ItemStack(destroyedBlockPermutation.getState( 'bap:fungus_type' )), block.center() );
-                    break;
-                case 'bamboo':
-                    dimension.spawnItem( new ItemStack('minecraft:bamboo'), block.center() );
-                    break;                   
-                case 'cactus':
-                    dimension.spawnItem( new ItemStack('minecraft:cactus'), block.center() );
-                    break;
-                default:
-                    break;
-            }
+            dimension.spawnItem( new ItemStack(current_item), block.center() );
         }
     }  /* release_flower_pot_items() */
     
