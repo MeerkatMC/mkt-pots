@@ -19,7 +19,7 @@
 				"size": [6, 6, 6]
 			},
 			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 0.4
+				"seconds_to_destroy": 0.1
 			},
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 15
@@ -55,7 +55,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -93,7 +93,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -131,7 +131,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -164,7 +164,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -202,7 +202,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -228,7 +228,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -254,7 +254,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -280,7 +280,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -306,7 +306,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -332,7 +332,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -358,7 +358,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -384,7 +384,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -410,7 +410,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -436,7 +436,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -462,7 +462,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -488,7 +488,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -514,7 +514,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -540,7 +540,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -566,7 +566,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -592,7 +592,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -618,7 +618,7 @@
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -644,7 +644,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -670,7 +670,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -696,7 +696,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -722,7 +722,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -748,7 +748,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -774,7 +774,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -800,7 +800,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -826,7 +826,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -852,7 +852,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -878,7 +878,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -904,7 +904,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -930,7 +930,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -956,7 +956,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			},
@@ -982,7 +982,7 @@
 							"face_dimming": true,
 							"ambient_occlusion": true
 						},
-						"*": { "render_method": "alpha_test" }
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
 				}
 			}
