@@ -51,6 +51,12 @@
 		},
 		"bap:flower_pot_yellow": {
 			"textures": "textures/blocks/flower_pot/yellow_flower_pot.png"
+		},
+		"bap:potted_fern": {
+			"textures": {
+				"path": "textures/blocks/fern",
+				"tint_color": "#2f9629"
+			}
 		}
 	}
 }
