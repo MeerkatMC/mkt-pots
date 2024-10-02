@@ -19,7 +19,7 @@
 				"size": [6, 6, 6]
 			},
 			"minecraft:destructible_by_mining": {
-				"seconds_to_destroy": 0.1
+				"seconds_to_destroy": 0
 			},
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 15
@@ -46,7 +46,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -66,7 +66,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -79,19 +79,19 @@
 							"texture": "potted_azalea_bush_side",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": true
+							"ambient_occlusion": false
 						},
 						"azalea_up": {
 							"texture": "potted_azalea_bush_top",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": true
+							"ambient_occlusion": false
 						},
 						"azalea_plant": {
 							"texture": "potted_azalea_bush_plant",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": true
+							"ambient_occlusion": false
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
@@ -104,7 +104,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -117,19 +117,19 @@
 							"texture": "potted_flowering_azalea_bush_side",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": true
+							"ambient_occlusion": false
 						},
 						"azalea_up": {
 							"texture": "potted_flowering_azalea_bush_top",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": true
+							"ambient_occlusion": false
 						},
 						"azalea_plant": {
 							"texture": "potted_flowering_azalea_bush_plant",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": true
+							"ambient_occlusion": false
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
@@ -143,7 +143,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -155,13 +155,13 @@
 						"cactus_side": {
 							"texture": "cactus_side",
 							"render_method": "alpha_test",
-							"face_dimming": false,
+							"face_dimming": true,
 							"ambient_occlusion": true
 						},
 						"cactus_top": {
 							"texture": "cactus_top",
 							"render_method": "alpha_test",
-							"face_dimming": false,
+							"face_dimming": true,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -175,7 +175,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -187,19 +187,19 @@
 						"bamboo_side": {
 							"texture": "bamboo_stem",
 							"render_method": "alpha_test",
-							"face_dimming": false,
+							"face_dimming": true,
 							"ambient_occlusion": true
 						},
 						"bamboo_top": {
 							"texture": "bamboo_stem",
 							"render_method": "alpha_test",
-							"face_dimming": false,
+							"face_dimming": true,
 							"ambient_occlusion": true
 						},
 						"bamboo_leaf": {
 							"texture": "bamboo_singleleaf",
 							"render_method": "alpha_test",
-							"face_dimming": false,
+							"face_dimming": true,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -213,7 +213,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -239,7 +239,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -265,7 +265,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -291,7 +291,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -317,7 +317,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -343,7 +343,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -369,7 +369,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -395,7 +395,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -421,7 +421,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -447,7 +447,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -473,7 +473,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -499,7 +499,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -525,7 +525,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -551,7 +551,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -577,7 +577,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -603,7 +603,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -629,7 +629,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -641,7 +641,7 @@
 						"plant": {
 							"texture": "oak_sapling",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -655,7 +655,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -667,7 +667,7 @@
 						"plant": {
 							"texture": "dark_oak_sapling",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -681,7 +681,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -693,7 +693,7 @@
 						"plant": {
 							"texture": "spruce_sapling",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -707,7 +707,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -719,7 +719,7 @@
 						"plant": {
 							"texture": "jungle_sapling",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -733,7 +733,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -745,7 +745,7 @@
 						"plant": {
 							"texture": "acacia_sapling",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -759,7 +759,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -771,7 +771,7 @@
 						"plant": {
 							"texture": "cherry_sapling",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -785,7 +785,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -797,7 +797,7 @@
 						"plant": {
 							"texture": "birch_sapling",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -811,7 +811,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -823,7 +823,7 @@
 						"plant": {
 							"texture": "mangrove_propagule",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -837,7 +837,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -849,7 +849,7 @@
 						"plant": {
 							"texture": "nether_shroom_red",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -863,7 +863,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -875,7 +875,7 @@
 						"plant": {
 							"texture": "nether_shroom_blue",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -889,7 +889,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -901,7 +901,7 @@
 						"plant": {
 							"texture": "mushroom_brown",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -915,7 +915,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -927,7 +927,7 @@
 						"plant": {
 							"texture": "mushroom_red",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -941,7 +941,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -953,7 +953,7 @@
 						"plant": {
 							"texture": "crimson_roots_pot",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -967,7 +967,7 @@
 						"dirt_up": {
 							"texture": "dirt",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": false
 						},
 						"pot_base": {
@@ -979,7 +979,7 @@
 						"plant": {
 							"texture": "warped_roots_pot",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }

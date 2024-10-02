@@ -19,7 +19,7 @@
 							"origin": [-3, 0, -3],
 							"size": [6, 6, 6],
 							"uv": {
-								"north": {"uv": [5, 10], "uv_size": [6, 6], "material_instance": "pot_base" },
+								"north": {"uv": [5, 10], "uv_size": [6, 6], "material_instance": "pot_base"},
 								"east": {"uv": [5, 10], "uv_size": [6, 6], "material_instance": "pot_base"},
 								"south": {"uv": [5, 10], "uv_size": [6, 6], "material_instance": "pot_base"},
 								"west": {"uv": [5, 10], "uv_size": [6, 6], "material_instance": "pot_base"},
@@ -50,6 +50,7 @@
 				{
 					"name": "plant",
 					"pivot": [0, 0, 0],
+					"rotation": [0, 90, 0],
 					"cubes": [
 						{
 							"origin": [0, 5, -8],
@@ -76,8 +77,8 @@
 					"pivot": [0, 0, 0],
 					"cubes": [
 						{
-							"origin": [-3.5, 7, -3.5],
-							"size": [7, 7, 7],
+							"origin": [-4, 8, -4],
+							"size": [8, 8, 8],
 							"uv": {
 								"north": {"uv": [4, 4], "uv_size": [8, 8], "material_instance": "azalea_side"},
 								"east": {"uv": [4, 4], "uv_size": [8, 8], "material_instance": "azalea_side"},
@@ -141,6 +142,8 @@
 						{
 							"origin": [0, 2, -8],
 							"size": [0, 16, 16],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -90, 0],
 							"uv": {
 								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "bamboo_leaf"}
 							}

@@ -2,9 +2,9 @@
 	"format_version": 2,
 	"header": {
 		"name": "Coloured Pots RP",
-		"description": "Coloured Pots RP (v1.0.3)",
-		"uuid": "4ea20693-94f4-4832-9d2c-9c960a790c1a",
-		"version": [1, 0, 3],
+		"description": "Coloured Pots RP (v1.0.4)",
+		"uuid": "9a63f432-f083-45fe-b79c-a0f659a98bc6",
+		"version": [1, 0, 4],
 		"min_engine_version": [1, 21, 20]
 	},
 	"metadata": {
@@ -14,8 +14,8 @@
 		{
 			"description": "Coloured Pots",
 			"type": "resources",
-			"uuid": "dc70a3e0-9ace-4d15-9bcb-11583d168e01",
-			"version": [1, 0, 3]
+			"uuid": "30e8265e-65cb-4f46-91cc-eb69be35de08",
+			"version": [1, 0, 4]
 		}
 	]
 }
