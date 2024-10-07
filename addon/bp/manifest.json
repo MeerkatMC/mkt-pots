@@ -2,9 +2,9 @@
 	"format_version": 2,
 	"header": {
 		"name": "Coloured Pots",
-		"description": "Coloured Pots BP (v1.0.5)",
-		"uuid": "0079d381-5dae-4c9a-be3f-d4a203db0866",
-		"version": [1, 0, 5],
+		"description": "Coloured Pots BP (v1.0.6)",
+		"uuid": "b9a39931-c435-4c7b-adda-5f19bc494100",
+		"version": [1, 0, 6],
 		"min_engine_version": [1, 21, 20]
 	},
 	"metadata": {
@@ -13,23 +13,23 @@
 	"modules": [
 		{
 			"description": "Behavior",
-			"version": [1, 0, 5],
-			"uuid": "7d937e23-bc91-4285-bfc9-4c3485ee5a1b",
+			"version": [1, 0, 6],
+			"uuid": "7a1aa749-03db-4d9a-ba4a-14b72ab91d63",
 			"type": "data"
 		},
 		{
 			"description": "Script resources",
 			"language": "javascript",
 			"type": "script",
-			"uuid": "951629da-4bcc-4e65-8cd3-e18544ace24f",
-			"version": [1, 0, 5],
+			"uuid": "4edc2a0d-2efd-4327-8b0a-d985e74b4f43",
+			"version": [1, 0, 6],
 			"entry": "scripts/main.js"
 		}
 	],
 	"dependencies": [
 		{
-			"uuid": "d698c744-8eee-4203-8699-0fc64b3e7cbb",
-			"version": [1, 0, 5]
+			"uuid": "e70643d8-ce25-4896-92eb-4797a10503a1",
+			"version": [1, 0, 6]
 		},
 		{
 			"module_name": "@minecraft/server",

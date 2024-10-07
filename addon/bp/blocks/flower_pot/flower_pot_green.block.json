@@ -9,7 +9,7 @@
 			}
 		},
 		"components": {
-			"minecraft:custom_components": [ "bap:change_flower" ],
+			"minecraft:custom_components": [ "bap:display_item_block_on_interact" ],
 			"minecraft:collision_box": {
 				"origin": [-3, 0, -3],
 				"size": [6, 6, 6]
