@@ -1,5 +1,8 @@
 {
 	"texture_data": {
+		"bonsai_pot": {
+			"textures": "textures/items/flower_pot/black_flower_pot.png"
+		},
 		"black_flower_pot": {
 			"textures": "textures/items/flower_pot/black_flower_pot.png"
 		},

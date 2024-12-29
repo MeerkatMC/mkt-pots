@@ -1,0 +1,21 @@
+{
+	"format_version": "1.21.50",
+	"minecraft:item": {
+		"description": {
+			"identifier": "bap:bonsai_pot_placer",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:icon": "bonsai_pot",
+            "minecraft:block_placer": {
+                "block": "bap:bonsai_pot"
+            },
+			"minecraft:display_name": {
+				"value": "Bonsai Pot"
+			}
+		}
+	}
+}

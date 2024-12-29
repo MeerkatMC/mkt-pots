@@ -14,16 +14,16 @@ export class DisplayItem
 
     /* 
      * Description: This method will register the DisplayItem "display_item_block_on_interact" custom component handler(s)
-     *        Args: None
+     *        Args: custom_component_name - The name of the custom component to register
      *      Return: None
      */
-    init()
+    init(custom_component_name)
     {
         // add listeners for custom block placement and destroy events so we can re-evaluate
         // the states of any blocks connected to the new/old block.
         try {
             world.beforeEvents.worldInitialize.subscribe((ievent) => {
-                ievent.blockComponentRegistry.registerCustomComponent( "bap:display_item_block_on_interact", 
+                ievent.blockComponentRegistry.registerCustomComponent( custom_component_name, 
                     {
                         onPlayerInteract: (event) => {
                             this.update_display_item( event );
