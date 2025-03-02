@@ -1,7 +1,19 @@
 {
 	"texture_data": {
-		"bonsai_pot": {
-			"textures": "textures/items/flower_pot/black_flower_pot.png"
+		"bonsai_pot_stone": {
+			"textures": "textures/items/bonsai/bonsai_pot_stone.png"
+		},
+		"bonsai_pot_calcite": {
+			"textures": "textures/items/bonsai/bonsai_pot_calcite.png"
+		},
+		"bonsai_pot_granite": {
+			"textures": "textures/items/bonsai/bonsai_pot_granite.png"
+		},
+		"bonsai_pot_tuff": {
+			"textures": "textures/items/bonsai/bonsai_pot_tuff.png"
+		},
+		"bonsai_pot_purpur": {
+			"textures": "textures/items/bonsai/bonsai_pot_purpur.png"
 		},
 		"black_flower_pot": {
 			"textures": "textures/items/flower_pot/black_flower_pot.png"

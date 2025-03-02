@@ -1,8 +1,8 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.21.60",
 	"minecraft:block": {
 		"description": {
-			"identifier": "bap:bonsai_pot",
+			"identifier": "bap:bonsai_pot_tuff",
 			"states": {
 				"bap:catergory": { "values": { "min": 0, "max": 2 } },
 				"bap:variant":   { "values": { "min": 0, "max": 15 } }
@@ -35,7 +35,7 @@
 					"plant":  "query.block_state('bap:catergory') != 0"
 				}
 			},
-			"minecraft:loot": "loot_tables/blocks/bap_bonsai_pot.json",
+			"minecraft:loot": "loot_tables/blocks/bonsai/bonsai_pot_tuff.loot.json",
 			"minecraft:light_dampening": 0,
 			"minecraft:map_color": "#ffffff"
 		},
@@ -51,7 +51,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -71,7 +77,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -109,7 +121,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -148,7 +166,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -180,7 +204,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -218,7 +248,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -244,7 +280,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -270,7 +312,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -296,7 +344,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -322,7 +376,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -348,7 +408,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -374,7 +440,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -400,7 +472,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -426,7 +504,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -452,7 +536,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -478,7 +568,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -504,11 +600,17 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
 						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},					
 						"plant": {
 							"texture": "cornflower",
 							"render_method": "alpha_test",
@@ -530,7 +632,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -556,7 +664,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -582,7 +696,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -608,7 +728,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -634,7 +760,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -660,7 +792,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -686,7 +824,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -712,7 +856,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -738,7 +888,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -764,7 +920,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -790,7 +952,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -816,7 +984,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -842,7 +1016,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -868,7 +1048,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -894,7 +1080,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -920,7 +1112,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -946,7 +1144,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -972,7 +1176,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -998,7 +1208,13 @@
 							"ambient_occlusion": false
 						},
 						"pot_base": {
-							"texture": "bap:flower_pot_white",
+							"texture": "bap:bonsai_pot_tuff",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "bap:bonsai_pot_stand",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true

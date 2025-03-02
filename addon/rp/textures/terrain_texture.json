@@ -4,6 +4,24 @@
 	"padding": 8,
 	"num_mip_levels": 4,
 	"texture_data": {
+		"bap:bonsai_pot_stand": {
+			"textures": "textures/blocks/bonsai/pot_stand.png"
+		},
+		"bap:bonsai_pot_stone": {
+			"textures": "textures/blocks/bonsai/pot_stone.png"
+		},
+		"bap:bonsai_pot_purpur": {
+			"textures": "textures/blocks/bonsai/pot_purpur.png"
+		},
+		"bap:bonsai_pot_granite": {
+			"textures": "textures/blocks/bonsai/pot_granite.png"
+		},
+		"bap:bonsai_pot_calcite": {
+			"textures": "textures/blocks/bonsai/pot_calcite.png"
+		},
+		"bap:bonsai_pot_tuff": {
+			"textures": "textures/blocks/bonsai/pot_tuff.png"
+		},
 		"bap:flower_pot_black": {
 			"textures": "textures/blocks/flower_pot/black_flower_pot.png"
 		},

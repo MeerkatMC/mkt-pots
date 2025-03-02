@@ -2,19 +2,19 @@
 	"format_version": "1.21.50",
 	"minecraft:item": {
 		"description": {
-			"identifier": "bap:bonsai_pot_placer",
+			"identifier": "bap:bonsai_pot_tuff_placer",
 			"menu_category": {
 				"category": "items"
 			}
 		},
 		"components": {
 			"minecraft:max_stack_size": 64,
-			"minecraft:icon": "bonsai_pot",
+			"minecraft:icon": "bonsai_pot_tuff",
             "minecraft:block_placer": {
-                "block": "bap:bonsai_pot"
+                "block": "bap:bonsai_pot_tuff"
             },
 			"minecraft:display_name": {
-				"value": "Bonsai Pot"
+				"value": "Tuff Bonsai Pot"
 			}
 		}
 	}

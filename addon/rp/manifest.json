@@ -2,10 +2,10 @@
 	"format_version": 2,
 	"header": {
 		"name": "Coloured Pots RP",
-		"description": "Coloured Pots RP (v1.0.7)",
-		"uuid": "7b51e85e-954d-4632-926d-8c1724aeace3",
-		"version": [1, 0, 7],
-		"min_engine_version": [1, 21, 50]
+		"description": "Coloured Pots RP (v1.0.8c)",
+		"uuid": "41d21573-8091-4673-a0bc-28790835d62d",
+		"version": [1, 0, 8],
+		"min_engine_version": [1, 21, 60]
 	},
 	"metadata": {
 		"authors": ["Meerkat","Brood"]
@@ -14,8 +14,8 @@
 		{
 			"description": "Coloured Pots",
 			"type": "resources",
-			"uuid": "2a9f332b-d9f2-4c5e-a1c4-b70166e26d0d",
-			"version": [1, 0, 7]
+			"uuid": "3bd8dc17-afbe-4e75-9c77-aae5c029d4c7",
+			"version": [1, 0, 8]
 		}
 	]
 }

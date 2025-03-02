@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.50",
+	"format_version": "1.21.60",
 
 	"bap:flower_pot_black": { "sound": "decorated_pot" },
 	"bap:flower_pot_blue": { "sound": "decorated_pot" },
@@ -16,6 +16,6 @@
 	"bap:flower_pot_purple": { "sound": "decorated_pot" },
 	"bap:flower_pot_red": { "sound": "decorated_pot" },
 	"bap:flower_pot_white": { "sound": "decorated_pot" },
-	"bap:flower_pot_yellow": { "sound": "decorated_pot" }.
-	"bap:bonsai_pot": { "sound": "decorated_pot" },
+	"bap:flower_pot_yellow": { "sound": "decorated_pot" },
+	"bap:bonsai_pot_stone": { "sound": "decorated_pot" }
 }
