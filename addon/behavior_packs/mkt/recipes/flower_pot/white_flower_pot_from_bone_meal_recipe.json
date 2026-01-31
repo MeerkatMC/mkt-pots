@@ -1,0 +1,24 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bap:white_flower_pot_from_bone_meal_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:bone_meal"
+			},
+			{
+				"item": "minecraft:flower_pot"
+			}
+		],
+		"result": [
+			{
+				"item": "mkt:flower_pot_white_placer"
+			}
+		]
+	}
+}

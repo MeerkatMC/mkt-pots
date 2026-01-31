@@ -1,0 +1,21 @@
+{
+	"format_version": 2,
+	"header": {
+		"name": "All the Pots RP",
+		"description": "All the Pots RP (v1.1.0)",
+		"uuid": "564c20c7-a367-46fa-824d-f21a25fb414c",
+		"version": [1, 1, 0],
+		"min_engine_version": [1, 21, 130]
+	},
+	"metadata": {
+		"authors": ["Meerkat"]
+	},
+	"modules": [
+		{
+			"description": "All the Pots",
+			"type": "resources",
+			"uuid": "81b615bb-6260-428f-b9cd-b47d60b2105c",
+			"version": [1, 1, 0]
+		}
+	]
+}

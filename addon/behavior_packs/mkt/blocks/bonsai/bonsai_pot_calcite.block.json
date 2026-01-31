@@ -1,0 +1,1234 @@
+{
+	"format_version": "1.21.60",
+	"minecraft:block": {
+		"description": {
+			"identifier": "mkt:bonsai_pot_calcite",
+			"states": {
+				"mkt:catergory": { "values": { "min": 0, "max": 2 } },
+				"mkt:variant":   { "values": { "min": 0, "max": 15 } }
+			}
+		},
+		"components": {
+			"minecraft:custom_components": [ "mkt:display_item_bonsai" ],
+			"minecraft:collision_box": {
+				"origin": [-3, 0, -3],
+				"size": [6, 6, 6]
+			},
+			"minecraft:selection_box": {
+				"origin": [-3, 0, -3],
+				"size": [6, 6, 6]
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0
+			},
+			"minecraft:destructible_by_explosion": {
+				"explosion_resistance": 15
+			},
+			"minecraft:geometry": {
+				"identifier": "geometry.bap.bonsai_pot",
+				"bone_visibility": {
+					"pot": true,
+					"azalea": "(query.block_state('mkt:catergory') == 0) && ( (query.block_state('mkt:variant') == 1) || (query.block_state('mkt:variant') == 2) )",
+					"cactus": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 3)",
+					"bamboo": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 4)",
+					"bonsai": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 5)",
+					"plant":  "query.block_state('mkt:catergory') != 0"
+				}
+			},
+			"minecraft:loot": "loot_tables/blocks/bonsai/bonsai_pot_calcite.loot.json",
+			"minecraft:light_dampening": 0,
+			"minecraft:map_color": "#ffffff"
+		},
+		"permutations": [
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 0)",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 1)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"azalea_side": {
+							"texture": "potted_azalea_bush_side",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"azalea_up": {
+							"texture": "potted_azalea_bush_top",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"azalea_plant": {
+							"texture": "potted_azalea_bush_plant",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 2)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"azalea_side": {
+							"texture": "potted_flowering_azalea_bush_side",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"azalea_up": {
+							"texture": "potted_flowering_azalea_bush_top",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"azalea_plant": {
+							"texture": "potted_flowering_azalea_bush_plant",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": false
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 3)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"cactus_side": {
+							"texture": "cactus_side",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"cactus_top": {
+							"texture": "cactus_top",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 4)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"bamboo_side": {
+							"texture": "bamboo_stem",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"bamboo_top": {
+							"texture": "bamboo_stem",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"bamboo_leaf": {
+							"texture": "bamboo_singleleaf",
+							"render_method": "alpha_test",
+							"face_dimming": true,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 5)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"bonsai": {
+							"texture": "pale_oak_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 0)",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "dandelion",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 1)",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "azure_bluet",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 2)",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "poppy",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 3)",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "blue_orchid",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 4)",
+				"components": {
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "allium",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 5)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "red_tulip",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 6)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "orange_tulip",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 7)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "white_tulip",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 8)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "pink_tulip",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 9)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "lily_of_the_valley",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 10)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},					
+						"plant": {
+							"texture": "cornflower",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 11)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "wither_rose",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 12)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "torchflower",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 13)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "deadbush",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 14)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "bap:potted_fern",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 15)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "oxeye_daisy",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 0)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "oak_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 1)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "dark_oak_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 2)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "spruce_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 3)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "jungle_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 4)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "acacia_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 5)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "cherry_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 6)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "birch_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 7)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mangrove_propagule",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 8)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "nether_shroom_red",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 9)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "nether_shroom_blue",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 10)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mushroom_brown",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 11)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mushroom_red",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 12)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "crimson_roots_pot",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 13)",
+				"components": {
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_calcite",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "warped_roots_pot",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			}
+		]
+	}
+}

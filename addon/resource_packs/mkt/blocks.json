@@ -1,0 +1,25 @@
+{
+	"format_version": "1.21.40",
+
+	"mkt:flower_pot_black": { "sound": "decorated_pot" },
+	"mkt:flower_pot_blue": { "sound": "decorated_pot" },
+	"mkt:flower_pot_brown": { "sound": "decorated_pot" },
+	"mkt:flower_pot_cyan": { "sound": "decorated_pot" },
+	"mkt:flower_pot_gray": { "sound": "decorated_pot" },
+	"mkt:flower_pot_green": { "sound": "decorated_pot" },
+	"mkt:flower_pot_light_blue": { "sound": "decorated_pot" },
+	"mkt:flower_pot_light_gray": { "sound": "decorated_pot" },
+	"mkt:flower_pot_lime": { "sound": "decorated_pot" },
+	"mkt:flower_pot_magenta": { "sound": "decorated_pot" },
+	"mkt:flower_pot_orange": { "sound": "decorated_pot" },
+	"mkt:flower_pot_pink": { "sound": "decorated_pot" },
+	"mkt:flower_pot_purple": { "sound": "decorated_pot" },
+	"mkt:flower_pot_red": { "sound": "decorated_pot" },
+	"mkt:flower_pot_white": { "sound": "decorated_pot" },
+	"mkt:flower_pot_yellow": { "sound": "decorated_pot" },
+	"mkt:bonsai_pot_calcite": { "sound": "decorated_pot" },
+	"mkt:bonsai_pot_granite": { "sound": "decorated_pot" },
+	"mkt:bonsai_pot_purpur": { "sound": "decorated_pot" },
+	"mkt:bonsai_pot_stone": { "sound": "decorated_pot" },
+	"mkt:bonsai_pot_tuff": { "sound": "decorated_pot" }
+}

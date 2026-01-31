@@ -1,0 +1,21 @@
+{
+	"format_version": "1.21.60",
+	"minecraft:item": {
+		"description": {
+			"identifier": "mkt:bonsai_pot_stone_placer",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:max_stack_size": 64,
+			"minecraft:icon": "bonsai_pot_stone",
+            "minecraft:block_placer": {
+                "block": "mkt:bonsai_pot_stone"
+            },
+			"minecraft:display_name": {
+				"value": "Stone Bonsai Pot"
+			}
+		}
+	}
+}

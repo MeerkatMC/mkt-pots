@@ -1,0 +1,24 @@
+{
+	"format_version": "1.12",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "bap:black_flower_pot_from_ink_recipe"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:ink_sac"
+			},
+			{
+				"item": "minecraft:flower_pot"
+			}
+		],
+		"result": [
+			{
+				"item": "mkt:flower_pot_black_placer"
+			}
+		]
+	}
+}
