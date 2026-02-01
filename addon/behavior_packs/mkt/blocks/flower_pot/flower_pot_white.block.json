@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.20",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"identifier": "mkt:flower_pot_white",
@@ -9,7 +9,7 @@
 			}
 		},
 		"components": {
-			"minecraft:custom_components": [ "mkt:display_item_flower" ],
+			"mkt:display_item": {},
 			"minecraft:collision_box": {
 				"origin": [-3, 0, -3],
 				"size": [6, 6, 6]
@@ -24,17 +24,7 @@
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 15
 			},
-			"minecraft:geometry": {
-				"identifier": "geometry.bap.flower_pot",
-				"bone_visibility": {
-					"pot": true,
-					"azalea": "(query.block_state('mkt:catergory') == 0) && ( (query.block_state('mkt:variant') == 1) || (query.block_state('mkt:variant') == 2) )",
-					"cactus": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 3)",
-					"bamboo": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 4)",
-					"plant":  "query.block_state('mkt:catergory') != 0"
-				}
-			},
-			"minecraft:loot": "loot_tables/blocks/bap_flower_pot_white.json",
+			"minecraft:loot": "loot_tables/blocks/flower_pot/white.json",
 			"minecraft:light_dampening": 0,
 			"minecraft:map_color": "#ffffff"
 		},
@@ -42,6 +32,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 0)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -52,7 +52,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
@@ -62,6 +62,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 1)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": true,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -72,26 +82,26 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"azalea_side": {
 							"texture": "potted_azalea_bush_side",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": false
+							"ambient_occlusion": true
 						},
 						"azalea_up": {
 							"texture": "potted_azalea_bush_top",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": false
+							"ambient_occlusion": true
 						},
 						"azalea_plant": {
 							"texture": "potted_azalea_bush_plant",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": false
+							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
@@ -100,6 +110,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 2)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": true,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -110,26 +130,26 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"azalea_side": {
 							"texture": "potted_flowering_azalea_bush_side",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": false
+							"ambient_occlusion": true
 						},
 						"azalea_up": {
 							"texture": "potted_flowering_azalea_bush_top",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": false
+							"ambient_occlusion": true
 						},
 						"azalea_plant": {
 							"texture": "potted_flowering_azalea_bush_plant",
 							"render_method": "alpha_test",
 							"face_dimming": true,
-							"ambient_occlusion": false
+							"ambient_occlusion": true
 						},
 						"*": { "render_method": "alpha_test", "texture": "dirt" }
 					}
@@ -139,6 +159,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 3)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": true,
+							"bamboo": false,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -149,7 +179,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"cactus_side": {
@@ -171,6 +201,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 4)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": true,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -181,7 +221,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"bamboo_side": {
@@ -207,8 +247,54 @@
 				}
 			},
 			{
-				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 0)",
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 5)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:flower_pot_white",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "pale_oak_sapling",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 6)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -219,7 +305,259 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "open_eyeblossom",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 7)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:flower_pot_white",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "closed_eyeblossom",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 8)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:flower_pot_white",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mkt:potted_rose_bush",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 9)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:flower_pot_white",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mkt:potted_lilac",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 10)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:flower_pot_white",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mkt:potted_peony",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 11)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:flower_pot_white",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mkt:potted_sunflower",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 12)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:flower_pot_white",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mkt:potted_pitcher_plant",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 0)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:flower_pot_white",
+							"render_method": "alpha_test",
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -235,6 +573,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 1)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -245,7 +593,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -261,6 +609,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 2)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -271,7 +629,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -287,6 +645,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 3)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -297,7 +665,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -313,6 +681,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 4)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -323,7 +701,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -339,6 +717,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 5)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -349,7 +737,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -365,6 +753,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 6)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -375,7 +773,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -391,6 +789,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 7)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -401,7 +809,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -417,6 +825,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 8)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -427,7 +845,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -443,6 +861,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 9)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -453,7 +881,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -469,6 +897,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 10)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -479,7 +917,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -495,6 +933,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 11)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -505,7 +953,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -521,6 +969,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 12)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -531,7 +989,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -547,6 +1005,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 13)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -557,7 +1025,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -573,6 +1041,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 14)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -583,11 +1061,11 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
-							"texture": "bap:potted_fern",
+							"texture": "mkt:potted_fern",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -599,6 +1077,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 15)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -609,7 +1097,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -625,6 +1113,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 0)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -635,7 +1133,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -651,6 +1149,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 1)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -661,7 +1169,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -677,6 +1185,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 2)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -687,7 +1205,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -703,6 +1221,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 3)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -713,7 +1241,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -729,6 +1257,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 4)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -739,7 +1277,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -755,6 +1293,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 5)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -765,7 +1313,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -781,6 +1329,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 6)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -791,7 +1349,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -807,6 +1365,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 7)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -817,7 +1385,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -833,6 +1401,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 8)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -843,7 +1421,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -859,6 +1437,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 9)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -869,7 +1457,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -885,6 +1473,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 10)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -895,7 +1493,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -911,6 +1509,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 11)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -921,7 +1529,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -937,6 +1545,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 12)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -947,7 +1565,7 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
@@ -963,6 +1581,16 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 13)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -973,11 +1601,47 @@
 						"pot_base": {
 							"texture": "mkt:flower_pot_white",
 							"render_method": "alpha_test",
-							"face_dimming": true,
+							"face_dimming": false,
 							"ambient_occlusion": true
 						},
 						"plant": {
 							"texture": "warped_roots_pot",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 14)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.flower_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances":{
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:flower_pot_white",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "pale_oak_sapling",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true

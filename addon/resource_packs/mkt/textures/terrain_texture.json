@@ -1,5 +1,5 @@
 {
-	"resource_pack_name": "vanilla",
+	"resource_pack_name": "All the Pots",
 	"texture_name": "atlas.terrain",
 	"padding": 8,
 	"num_mip_levels": 4,
@@ -70,11 +70,26 @@
 		"mkt:flower_pot_yellow": {
 			"textures": "textures/blocks/flower_pot/yellow_flower_pot.png"
 		},
-		"bap:potted_fern": {
+		"mkt:potted_fern": {
 			"textures": {
 				"path": "textures/blocks/fern",
 				"tint_color": "#2f9629"
 			}
+		},
+		"mkt:potted_pitcher_plant": {
+			"textures": "textures/blocks/potted/pitcher_plant.png"
+		},
+		"mkt:potted_sunflower": {
+			"textures": "textures/blocks/potted/sunflower.png"
+		},
+		"mkt:potted_peony": {
+			"textures": "textures/blocks/potted/peony.png"
+		},
+		"mkt:potted_lilac": {
+			"textures": "textures/blocks/potted/lilac.png"
+		},
+		"mkt:potted_rose_bush": {
+			"textures": "textures/blocks/potted/rose_bush.png"
 		}
 	}
 }

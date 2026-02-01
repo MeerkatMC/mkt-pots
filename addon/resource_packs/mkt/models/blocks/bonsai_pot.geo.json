@@ -1,9 +1,9 @@
 {
-	"format_version": "1.21.20",
+	"format_version": "1.21.0",
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.bap.bonsai_pot",
+				"identifier": "geometry.mkt.bonsai_pot",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 3,
@@ -186,7 +186,16 @@
 						}
 					]
 				}
-			]
+			],
+			"item_display_transforms": {
+				"thirdperson_righthand": {
+					"rotation": [0, 0, 0],
+					"translation": [0, 0, 0],
+					"scale": [0.8, 0.8, 0.8],
+					"rotation_pivot": [0, 0, 0],
+					"scale_pivot": [0, 0, 0]
+				}
+			}
 		}
 	]
 }

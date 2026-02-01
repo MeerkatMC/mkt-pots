@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.130",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mkt:bonsai_pot_stone"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:stone"
+			},
+			{
+				"item": "minecraft:dirt"
+			}
+		],
+		"unlock": [{ "item": "minecraft:stone" }],
+		"result":
+		{
+			"item": "mkt:bonsai_pot_stone_placer"
+		}
+	}
+}

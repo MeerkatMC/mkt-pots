@@ -1,5 +1,5 @@
 {
-	"format_version": "1.21.60",
+	"format_version": "1.21.130",
 	"minecraft:block": {
 		"description": {
 			"identifier": "mkt:bonsai_pot_stone",
@@ -9,7 +9,7 @@
 			}
 		},
 		"components": {
-			"minecraft:custom_components": [ "mkt:display_item_bonsai" ],
+			"mkt:display_item": {},
 			"minecraft:collision_box": {
 				"origin": [-3, 0, -3],
 				"size": [6, 6, 6]
@@ -24,18 +24,7 @@
 			"minecraft:destructible_by_explosion": {
 				"explosion_resistance": 15
 			},
-			"minecraft:geometry": {
-				"identifier": "geometry.bap.bonsai_pot",
-				"bone_visibility": {
-					"pot": true,
-					"azalea": "(query.block_state('mkt:catergory') == 0) && ( (query.block_state('mkt:variant') == 1) || (query.block_state('mkt:variant') == 2) )",
-					"cactus": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 3)",
-					"bamboo": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 4)",
-					"bonsai": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 5)",
-					"plant":  "query.block_state('mkt:catergory') != 0"
-				}
-			},
-			"minecraft:loot": "loot_tables/blocks/bonsai/bonsai_pot_stone.loot.json",
+			"minecraft:loot": "loot_tables/blocks/bonsai/stone.loot.json",
 			"minecraft:light_dampening": 0,
 			"minecraft:map_color": "#ffffff"
 		},
@@ -43,6 +32,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 0)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -69,6 +69,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 1)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": true,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -113,6 +124,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 2)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": true,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -158,6 +180,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 3)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": true,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -196,6 +229,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 4)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": true,
+							"bonsai": false,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -238,8 +282,19 @@
 				}
 			},
 			{
-				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 5)",
+				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 14)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": true,
+							"plant":  false
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -270,8 +325,107 @@
 				}
 			},
 			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 6)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_stone",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "open_eyeblossom",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 7)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_stone",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"pot_stand": {
+							"texture": "mkt:bonsai_pot_stand",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "closed_eyeblossom",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+
+
+			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 0)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -304,6 +458,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 1)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -336,6 +501,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 2)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -368,6 +544,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 3)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -400,6 +587,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 4)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances": {
 						"dirt_up": {
 							"texture": "dirt",
@@ -432,6 +630,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 5)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -464,6 +673,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 6)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -496,6 +716,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 7)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -528,6 +759,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 8)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -560,6 +802,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 9)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -592,6 +845,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 10)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -624,6 +888,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 11)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -656,6 +931,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 12)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -688,6 +974,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 13)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -720,6 +1017,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 14)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -740,7 +1048,7 @@
 							"ambient_occlusion": true
 						},
 						"plant": {
-							"texture": "bap:potted_fern",
+							"texture": "mkt:potted_fern",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true
@@ -752,6 +1060,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 1) && (query.block_state('mkt:variant') == 15)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -784,6 +1103,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 0)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -816,6 +1146,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 1)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -848,6 +1189,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 2)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -880,6 +1232,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 3)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -912,6 +1275,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 4)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -944,6 +1318,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 5)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -976,6 +1361,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 6)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -1008,6 +1404,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 7)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -1040,6 +1447,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 8)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -1072,6 +1490,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 9)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -1104,6 +1533,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 10)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -1136,6 +1576,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 11)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -1168,6 +1619,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 12)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -1200,6 +1662,17 @@
 			{
 				"condition": "(query.block_state('mkt:catergory') == 2) && (query.block_state('mkt:variant') == 13)",
 				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
 					"minecraft:material_instances":{
 						"dirt_up": {
 							"texture": "dirt",
@@ -1221,6 +1694,191 @@
 						},
 						"plant": {
 							"texture": "warped_roots_pot",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 8)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_stone",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mkt:potted_rose_bush",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 9)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_stone",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mkt:potted_lilac",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 10)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_stone",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mkt:potted_peony",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 11)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_stone",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mkt:potted_sunflower",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"*": { "render_method": "alpha_test", "texture": "dirt" }
+					}
+				}
+			},
+			{
+				"condition": "(query.block_state('mkt:catergory') == 0) && (query.block_state('mkt:variant') == 12)",
+				"components": {
+					"minecraft:geometry": {
+						"identifier": "geometry.mkt.bonsai_pot",
+						"bone_visibility": {
+							"pot": true,
+							"azalea": false,
+							"cactus": false,
+							"bamboo": false,
+							"bonsai": false,
+							"plant":  true
+						}
+					},
+					"minecraft:material_instances": {
+						"dirt_up": {
+							"texture": "dirt",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": false
+						},
+						"pot_base": {
+							"texture": "mkt:bonsai_pot_stone",
+							"render_method": "alpha_test",
+							"face_dimming": false,
+							"ambient_occlusion": true
+						},
+						"plant": {
+							"texture": "mkt:potted_pitcher_plant",
 							"render_method": "alpha_test",
 							"face_dimming": false,
 							"ambient_occlusion": true

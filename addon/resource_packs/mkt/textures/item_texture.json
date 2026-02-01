@@ -1,4 +1,6 @@
 {
+	"resource_pack_name": "All the Pots",
+	"texture_name": "atlas.items",
 	"texture_data": {
 		"bonsai_pot_stone": {
 			"textures": "textures/items/bonsai/bonsai_pot_stone.png"

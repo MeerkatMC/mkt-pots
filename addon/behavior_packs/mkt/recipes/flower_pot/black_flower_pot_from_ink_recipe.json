@@ -1,8 +1,8 @@
 {
-	"format_version": "1.12",
+	"format_version": "1.21.130",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bap:black_flower_pot_from_ink_recipe"
+			"identifier": "mkt:black_flower_pot_from_ink_recipe"
 		},
 		"tags": [
 			"crafting_table"
@@ -15,10 +15,10 @@
 				"item": "minecraft:flower_pot"
 			}
 		],
-		"result": [
-			{
-				"item": "mkt:flower_pot_black_placer"
-			}
-		]
+		"unlock": [{ "item": "minecraft:flower_pot" }],
+		"result":
+		{
+			"item": "mkt:flower_pot_black_placer"
+		}
 	}
 }

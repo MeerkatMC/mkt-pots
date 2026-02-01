@@ -1,8 +1,8 @@
 {
-	"format_version": "1.12",
+	"format_version": "1.21.130",
 	"minecraft:recipe_shapeless": {
 		"description": {
-			"identifier": "bap:green_flower_pot_recipe"
+			"identifier": "mkt:green_flower_pot_recipe"
 		},
 		"tags": [
 			"crafting_table"
@@ -15,10 +15,10 @@
 				"item": "minecraft:flower_pot"
 			}
 		],
-		"result": [
-			{
-				"item": "mkt:flower_pot_green_placer"
-			}
-		]
+		"unlock": [{ "item": "minecraft:flower_pot" }],
+		"result":
+		{
+			"item": "mkt:flower_pot_green_placer"
+		}
 	}
 }

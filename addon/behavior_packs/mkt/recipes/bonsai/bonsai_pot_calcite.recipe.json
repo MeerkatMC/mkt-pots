@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.130",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mkt:bonsai_pot_calcite"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:calcite"
+			},
+			{
+				"item": "minecraft:dirt"
+			}
+		],
+		"unlock": [{ "item": "minecraft:calcite" }],
+		"result":
+		{
+			"item": "mkt:bonsai_pot_calcite_placer"
+		}
+	}
+}

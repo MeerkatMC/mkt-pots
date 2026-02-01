@@ -1,9 +1,9 @@
 {
-	"format_version": "1.21.30",
+	"format_version": "1.21.0",
 	"minecraft:geometry": [
 		{
 			"description": {
-				"identifier": "geometry.bap.flower_pot",
+				"identifier": "geometry.mkt.flower_pot",
 				"texture_width": 16,
 				"texture_height": 16,
 				"visible_bounds_width": 3,
@@ -43,31 +43,6 @@
 							"size": [4, 4, 4],
 							"uv": {
 								"up": {"uv": [4, 16], "uv_size": [-4, -4], "material_instance": "dirt_up"}
-							}
-						}
-					]
-				},
-				{
-					"name": "plant",
-					"pivot": [0, 0, 0],
-					"rotation": [0, 90, 0],
-					"cubes": [
-						{
-							"origin": [0, 5, -8],
-							"size": [0, 11, 16],
-							"pivot": [0, 0, 0],
-							"rotation": [0, 45, 0],
-							"uv": {
-								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "plant"}
-							}
-						},
-						{
-							"origin": [0, 5, -8],
-							"size": [0, 11, 16],
-							"pivot": [0, 0, 0],
-							"rotation": [0, -45, 0],
-							"uv": {
-								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "plant"}
 							}
 						}
 					]
@@ -146,6 +121,31 @@
 							"rotation": [0, -90, 0],
 							"uv": {
 								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "bamboo_leaf"}
+							}
+						}
+					]
+				},
+				{
+					"name": "plant",
+					"pivot": [0, 0, 0],
+					"rotation": [0, 90, 0],
+					"cubes": [
+						{
+							"origin": [0, 5, -8],
+							"size": [0, 11, 16],
+							"pivot": [0, 0, 0],
+							"rotation": [0, 45, 0],
+							"uv": {
+								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "plant"}
+							}
+						},
+						{
+							"origin": [0, 5, -8],
+							"size": [0, 11, 16],
+							"pivot": [0, 0, 0],
+							"rotation": [0, -45, 0],
+							"uv": {
+								"east": {"uv": [0, 0], "uv_size": [16, 16], "material_instance": "plant"}
 							}
 						}
 					]

@@ -1,0 +1,24 @@
+{
+	"format_version": "1.21.130",
+	"minecraft:recipe_shapeless": {
+		"description": {
+			"identifier": "mkt:bonsai_pot_purpur"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"ingredients": [
+			{
+				"item": "minecraft:purpur_block"
+			},
+			{
+				"item": "minecraft:dirt"
+			}
+		],
+		"unlock": [{ "item": "minecraft:purpur_block" }],
+		"result":
+		{
+			"item": "mkt:bonsai_pot_purpur_placer"
+		}
+	}
+}
